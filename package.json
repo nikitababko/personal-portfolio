@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "14.0.1",
@@ -14,25 +15,38 @@
     "react-dom": "18"
   },
   "devDependencies": {
+    "@commitlint/cli": "18.2.0",
+    "@commitlint/config-conventional": "18.1.0",
     "@types/node": "20",
     "@types/react": "18",
     "@types/react-dom": "18",
     "@typescript-eslint/eslint-plugin": "6.9.1",
     "@typescript-eslint/parser": "6.9.1",
+    "commitizen": "4.3.0",
+    "cz-customizable": "7.0.0",
     "eslint": "8.50.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "17.1.0",
     "eslint-config-next": "14.0.1",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-cypress": "2.15.1",
-    "eslint-plugin-jest-dom": "5.1.0",
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-prettier": "5.0.1",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-testing-library": "6.1.0",
     "eslint-plugin-unicorn": "49.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.0.2",
     "prettier": "3.0.3",
     "typescript": "5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "commitizen.config.json"
+    }
   }
 }

@@ -19,13 +19,12 @@
     "project": "tsconfig.json",
     "tsconfigRootDir": "./"
   },
-  "ignorePatterns": ["out"],
+  "ignorePatterns": ["out", "next-env.d.ts"],
   "plugins": ["@typescript-eslint", "prettier"],
   "env": {
     "node": true,
     "es6": true,
-    "browser": true,
-    "jest": true
+    "browser": true
   },
   "overrides": [
     {
@@ -90,32 +89,10 @@
       }
     },
     {
-      "files": ["src/components/Icon/Icon.data.tsx"],
-      "rules": {
-        "react/no-multi-comp": [
-          "error",
-          {
-            "ignoreStateless": true
-          }
-        ]
-      }
-    },
-    {
       "files": ["*.js"],
       "rules": {
         "@typescript-eslint/no-var-requires": 0
       }
-    },
-    {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "extends": [
-        "plugin:testing-library/react",
-        "plugin:jest-dom/recommended"
-      ],
-      "plugins": ["testing-library", "jest-dom"]
     },
     {
       "files": ["*.tsx"],
@@ -127,6 +104,12 @@
       "files": ["**/*.cy.{js,ts,jsx,tsx}"],
       "extends": ["plugin:cypress/recommended"],
       "plugins": ["cypress"]
+    },
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "unicorn/prefer-module": 0
+      }
     }
   ]
 }
