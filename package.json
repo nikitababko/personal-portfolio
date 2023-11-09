@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nikitababko/reset-css": "1.0.4",
+    "@sentry/nextjs": "7.79.0",
     "next": "14.0.1",
     "react": "18",
     "react-dom": "18"
