@@ -46,6 +46,7 @@
         ],
         "import/prefer-default-export": "off",
         "@typescript-eslint/indent": "off",
+        "@typescript-eslint/no-namespace": "off",
         "arrow-body-style": "off",
         "import/no-extraneous-dependencies": [
           "error",
@@ -84,6 +85,12 @@
               "camelCase": true,
               "pascalCase": true
             }
+          }
+        ],
+        "unicorn/prevent-abbreviations": [
+          "error",
+          {
+            "ignore": ["Props"]
           }
         ]
       }
