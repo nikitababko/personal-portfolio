@@ -2,9 +2,21 @@
 
 .container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 20px 0;
+  height: 50px;
   background-color: $color-grey-50;
+  transition: height $transition-timing-function $transition-duration;
+  overflow: hidden;
+  // TODO: maybe use shadow
+  //box-shadow: 1px -35px 40px 10px $color-purple;
+
+  &IsMobile {
+    height: 200px;
+  }
 }
 
 .itemsWrapper {
@@ -13,6 +25,7 @@
   justify-content: center;
   align-items: center;
   column-gap: 50px;
+  height: 100%;
 }
 
 .item {
@@ -45,8 +58,21 @@
   }
 }
 
-@media (max-width: $media479) {
-  .container {
-    display: none;
+@media (max-width: $media-479) {
+  .itemsWrapper {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transition-timing-function $transition-duration;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: 200px;
+
+    &IsMobile {
+      pointer-events: auto;
+      opacity: 1;
+    }
   }
 }
+
+
