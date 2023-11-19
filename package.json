@@ -26,6 +26,7 @@
     "@typescript-eslint/parser": "6.9.1",
     "autoprefixer": "10.4.16",
     "commitizen": "4.3.0",
+    "csstype": "3.1.2",
     "cz-customizable": "7.0.0",
     "eslint": "8.50.0",
     "eslint-config-airbnb-base": "15.0.0",
