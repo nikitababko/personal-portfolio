@@ -41,7 +41,7 @@
           {
             "ignoreEnums": true,
             "ignoreNumericLiteralTypes": true,
-            "ignore": [1023, 767, 479, 374, 2, 1, 0]
+            "ignore": [24]
           }
         ],
         "import/prefer-default-export": "off",
