@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
   compiler: {
     styledComponents: true,
@@ -21,7 +20,7 @@ const nextConfig = {
       process.env.YANDEX_METRICA_COUNTER_NUMBER,
   },
   images: {
-    domains: ['localhost'],
+    // domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'https',
