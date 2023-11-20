@@ -1,78 +1,80 @@
 @import 'src/app/styles/variables.scss';
 
-.container {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  background-color: $color-grey-50;
-  transition: height $transition-timing-function $transition-duration;
-  overflow: hidden;
-  // TODO: maybe use shadow
-  //box-shadow: 1px -35px 40px 10px $color-purple;
-
-  &IsMobile {
-    height: 200px;
-  }
-}
-
-.itemsWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  column-gap: 50px;
-  height: 100%;
-}
-
-.item {
-  position: relative;
-  color: $color-grey-100;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color $transition-timing-function $transition-duration;
-
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -4px;
-    left: 0;
+@media screen and (min-width: $media-320), (max-width: $media-320) {
+  .container {
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 2px;
-    background-color: $color-purple;
-    opacity: 0;
-    transition: opacity $transition-timing-function $transition-duration;
+    height: 50px;
+    background-color: $color-grey-50;
+    transition: height $transition-timing-function $transition-duration;
+    overflow: hidden;
+    box-shadow: 1px -45px 40px 10px $color-purple;
+
+    &IsMobile {
+      height: 260px;
+    }
   }
 
-  &:hover {
-    color: $color-purple;
-  }
-
-  &:hover:after {
-    opacity: 1;
-  }
-}
-
-@media (max-width: $media-479) {
   .itemsWrapper {
     opacity: 0;
     pointer-events: none;
     transition: opacity $transition-timing-function $transition-duration;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
-    height: 200px;
+    align-items: center;
+    row-gap: 30px;
 
     &IsMobile {
       pointer-events: auto;
       opacity: 1;
     }
   }
+
+  .item {
+    position: relative;
+    color: $color-grey-100;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color $transition-timing-function $transition-duration;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-purple;
+      opacity: 0;
+      transition: opacity $transition-timing-function $transition-duration;
+    }
+
+    &:hover {
+      color: $color-purple;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
 }
 
+@media screen and (min-width: $media-480) {
+  .itemsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    height: 100%;
+    opacity: 1;
+  }
+}
 
