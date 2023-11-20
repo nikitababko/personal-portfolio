@@ -1,3 +1,7 @@
 @import '@nikitababko/reset-css';
 @import 'variables.scss';
-  
+
+body {
+  color: $color-black;
+  overflow: hidden;
+}
