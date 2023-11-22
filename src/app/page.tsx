@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { NavBar } from './components';
+import { Home, NavBar } from './components';
 
-export default function Home() {
+export default function App() {
   return (
-    <div>
+    <div className="app">
       <NavBar />
 
       <main>
-        <h1>Hello world!</h1>
+        <Home />
       </main>
     </div>
   );

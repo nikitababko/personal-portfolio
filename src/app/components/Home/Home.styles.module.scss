@@ -1,0 +1,30 @@
+@import 'src/app/styles/variables.scss';
+
+@media screen and (min-width: $media-320), (max-width: $media-320) {
+  .container {
+    height: 100vh;
+    background-color: $color-grey-200;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (min-width: $media-992) {
+  .inner {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .avatar {
+    width: 530px;
+    height: 550px;
+  }
+}

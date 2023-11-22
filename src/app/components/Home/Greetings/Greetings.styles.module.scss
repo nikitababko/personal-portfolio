@@ -1,0 +1,88 @@
+@import 'src/app/styles/variables.scss';
+
+@media screen and (min-width: $media-320), (max-width: $media-320) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .badgeContainer {
+    display: flex;
+    height: 40px;
+    width: 260px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background-color: $color-white;
+    box-shadow: 0 0 20px lighten($color-black, 70);
+    border-radius: 12px;
+
+    h1, h2, h3 {
+      font-size: 16px;
+    }
+  }
+
+  .name {
+    font-weight: 600;
+  }
+
+  .downloadCVContainer {
+    column-gap: 20px;
+    cursor: pointer;
+    transition: color $transition-timing-function $transition-duration, background-color $transition-timing-function $transition-duration;
+
+    svg {
+      path {
+        transition: fill $transition-timing-function $transition-duration;
+      }
+    }
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+
+  .emoji {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: $media-992) {
+  .container {
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 60px;
+  }
+
+  .badgeContainer {
+    width: fit-content;
+    height: 80px;
+
+    h1, h2, h3 {
+      font-size: 30px;
+    }
+  }
+
+  .downloadCVContainer {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .emoji {
+    font-size: 44px;
+  }
+}
+
