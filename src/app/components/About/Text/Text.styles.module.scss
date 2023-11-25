@@ -1,0 +1,20 @@
+@import 'src/app/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.paragraph {
+  font-size: 14px;
+  text-indent: 20px;
+  line-height: $line-height;
+}
+
+@media screen and (min-width: $media-768) {
+  .paragraph {
+    font-size: 20px;
+    text-indent: 20px;
+  }
+}

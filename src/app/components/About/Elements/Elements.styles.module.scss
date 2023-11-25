@@ -1,0 +1,34 @@
+@import 'src/app/styles/variables.scss';
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  width: 100%;
+  max-width: 100px;
+  text-align: center;
+}
+
+.itemText {
+  font-size: 14px;
+  line-height: $line-height;
+}
+
+@media screen and (min-width: $media-768) {
+  .item {
+    max-width: 300px;
+  }
+
+  .itemText {
+    font-size: 20px;
+  }
+}
