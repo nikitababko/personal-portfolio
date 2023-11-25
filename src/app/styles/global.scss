@@ -3,12 +3,27 @@
 
 body {
   color: $color-black;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .sectionInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.sectionContainer {
+  padding: 30px 0;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: $media-992) {
+  .sectionContainer {
+    padding-top: 50px;
+  }
 }
