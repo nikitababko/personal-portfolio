@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { About, Home, NavBar } from './components';
+import {
+  About,
+  Home,
+  NavBar,
+  Projects,
+} from './components';
 
 export default function App() {
   return (
@@ -11,6 +16,8 @@ export default function App() {
         <Home />
 
         <About />
+
+        <Projects />
       </main>
     </div>
   );
