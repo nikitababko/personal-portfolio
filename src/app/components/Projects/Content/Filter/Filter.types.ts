@@ -3,23 +3,27 @@ import type React from 'react';
 export namespace FilterNSTypes {
   export type Reference = HTMLDivElement | null;
 
+  export type Offset = {
+    offsetLeft: number;
+    offsetTop: number;
+  };
+
   export type UseController = () => {
-    indent: number;
-    setIndent: React.Dispatch<React.SetStateAction<number>>;
-    indentOfFirstElement?: number;
-    selectedFilter: FilterValue;
+    offset: Offset;
+    setOffset: React.Dispatch<React.SetStateAction<Offset>>;
+    selectedFilter: FilterItem;
     setSelectedFilter: React.Dispatch<
-      React.SetStateAction<FilterValue>
-    >;
-    reference: React.MutableRefObject<
-      Reference | undefined
+      React.SetStateAction<FilterItem>
     >;
   };
 
   export type FilterItem = {
     id: number;
-    value: FilterValue;
+    value:
+      | 'All'
+      | 'Web app'
+      | 'Landings'
+      | 'Libs'
+      | 'Design';
   };
-
-  export type FilterValue = 'All' | 'Web app' | 'Landings';
 }

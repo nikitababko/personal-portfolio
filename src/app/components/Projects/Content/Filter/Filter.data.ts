@@ -13,4 +13,12 @@ export const filters: FilterNSTypes.FilterItem[] = [
     id: 3,
     value: 'Landings',
   },
+  {
+    id: 4,
+    value: 'Libs',
+  },
+  {
+    id: 5,
+    value: 'Design',
+  },
 ];

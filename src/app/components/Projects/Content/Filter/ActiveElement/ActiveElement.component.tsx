@@ -5,15 +5,16 @@ import styles from './ActiveElement.styles.module.scss';
 
 export const ActiveElement: React.FC<
   ActiveElementNSTypes.Props
-> = ({ indent, selectedFilter }) => {
+> = ({ offset, selectedFilter }) => {
   return (
     <div
       className={styles.container}
       style={{
-        left: indent,
+        top: offset.offsetTop,
+        left: offset.offsetLeft,
       }}
     >
-      <p className={styles.value}>{selectedFilter}</p>
+      <p className={styles.value}>{selectedFilter.value}</p>
     </div>
   );
 };

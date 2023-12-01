@@ -3,24 +3,29 @@ import { useEffect, useRef, useState } from 'react';
 import type { ElementNSTypes } from './Element.types';
 
 export const useController: ElementNSTypes.UseController = (
-  filterValue,
-  setIndent,
+  filterItem,
+  setOffset,
   setSelectedFilter,
-  indentOfFirstElement,
 ) => {
   const reference = useRef<ElementNSTypes.Reference>();
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const handleClick = () => {
-    const left =
-      reference?.current?.getBoundingClientRect().left;
+    const offsetLeft = reference?.current?.offsetLeft;
+    const offsetTop = reference?.current?.offsetTop;
 
-    if (indentOfFirstElement && left) {
-      setIndent(left - indentOfFirstElement);
+    if (
+      offsetLeft !== undefined &&
+      offsetTop !== undefined
+    ) {
+      setOffset({
+        offsetLeft,
+        offsetTop,
+      });
     }
 
     setIsActive(true);
-    setSelectedFilter(filterValue);
+    setSelectedFilter(filterItem);
   };
 
   useEffect(() => {

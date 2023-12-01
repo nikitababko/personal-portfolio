@@ -7,18 +7,15 @@ export namespace ElementNSTypes {
 
   export type Props = Pick<
     ReturnType<FilterNSTypes.UseController>,
-    | 'setIndent'
-    | 'setSelectedFilter'
-    | 'indentOfFirstElement'
+    'setOffset' | 'setSelectedFilter'
   > & {
-    filterValue: FilterNSTypes.FilterValue;
+    filterItem: FilterNSTypes.FilterItem;
   };
 
   export type UseController = (
-    filterValue: FilterNSTypes.FilterValue,
-    setIndent: ReturnType<FilterNSTypes.UseController>['setIndent'],
+    filterItem: FilterNSTypes.FilterItem,
+    setOffset: ReturnType<FilterNSTypes.UseController>['setOffset'],
     setSelectedFilter: ReturnType<FilterNSTypes.UseController>['setSelectedFilter'],
-    indentOfFirstElement: ReturnType<FilterNSTypes.UseController>['indentOfFirstElement'],
   ) => {
     reference: MutableRefObject<Reference | undefined>;
     handleClick: () => void;

@@ -1,28 +1,23 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import type { FilterNSTypes } from './Filter.types';
+import { filters } from './Filter.data';
 
 export const useController: FilterNSTypes.UseController =
   () => {
-    const reference = useRef<FilterNSTypes.Reference>();
-    const [indent, setIndent] = useState<number>(0);
-    const [indentOfFirstElement, setIndentOfFirstElement] =
-      useState<number | undefined>(0);
-    const [selectedFilter, setSelectedFilter] =
-      useState<FilterNSTypes.FilterValue>('All');
+    const [offset, setOffset] =
+      useState<FilterNSTypes.Offset>({
+        offsetLeft: 0,
+        offsetTop: 0,
+      });
 
-    useEffect(() => {
-      setIndentOfFirstElement(
-        reference?.current?.getBoundingClientRect().left,
-      );
-    }, []);
+    const [selectedFilter, setSelectedFilter] =
+      useState<FilterNSTypes.FilterItem>(filters[0]);
 
     return {
-      indent,
-      indentOfFirstElement,
-      setIndent,
+      offset,
+      setOffset,
       selectedFilter,
       setSelectedFilter,
-      reference,
     };
   };
