@@ -17,15 +17,15 @@ export const Greetings: React.FC = () => {
       </div>
 
       <div className={styles.badgeContainer}>
-        <h2 className={styles.jobTitle}>
+        <p className={styles.jobTitle}>
           I am a Software engineer
-        </h2>
+        </p>
       </div>
 
       <div
         className={`${styles.badgeContainer} ${styles.downloadCVContainer}`}
       >
-        <h3 className={styles.downloadCV}>Download CV</h3>
+        <p className={styles.downloadCV}>Download CV</p>
 
         <Icon name="download" size={24} />
       </div>

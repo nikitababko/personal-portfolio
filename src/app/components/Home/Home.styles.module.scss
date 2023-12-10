@@ -2,8 +2,12 @@
 
 @media screen and (min-width: $media-320), (max-width: $media-320) {
   .container {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 0 20px;
     background-color: $color-grey-200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .inner {

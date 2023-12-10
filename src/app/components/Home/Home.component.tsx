@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
     <section className={styles.container}>
       <div className={`sectionInner ${styles.inner}`}>
         <Image
-          src="/assets/intro/avatar.png"
+          src="/assets/home/avatar.png"
           alt="Avatar"
           width={300}
           height={320}
