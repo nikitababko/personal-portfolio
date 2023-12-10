@@ -1,20 +1,15 @@
-'use client';
-
 import React from 'react';
 
-import { filters } from './Filter.data';
 import styles from './Filter.styles.module.scss';
 import { Element } from './Element';
 import { useController } from './Filter.controller';
 import { ActiveElement } from './ActiveElement';
+import type { ProjectsFilterNSTypes } from './Filter.types';
 
-export const Filter: React.FC = () => {
-  const {
-    offset,
-    setOffset,
-    selectedFilter,
-    setSelectedFilter,
-  } = useController();
+export const Filter: React.FC<
+  ProjectsFilterNSTypes.Props
+> = ({ selectedFilter, setSelectedFilter, filters }) => {
+  const { offset, setOffset } = useController();
 
   return (
     <div className={styles.container}>

@@ -1,0 +1,29 @@
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import styles from './Project.styles.module.scss';
+import type { GalleryProjectNSTypes } from './Project.types';
+
+export const Project: React.FC<
+  GalleryProjectNSTypes.Props
+> = ({ project }) => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.imageWrapper}>
+        <Image src={project.src} alt={project.alt} fill />
+      </div>
+
+      <p className={styles.title}>{project.title}</p>
+
+      <Link
+        className={styles.more}
+        href={{
+          pathname: `/projects/${project.id}`,
+        }}
+      >
+        More
+      </Link>
+    </div>
+  );
+};

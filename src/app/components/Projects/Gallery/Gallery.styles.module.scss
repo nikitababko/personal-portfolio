@@ -1,0 +1,34 @@
+@import '../../../styles/variables';
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 14px;
+  row-gap: 24px;
+}
+
+.transitionEnter {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.transitionEnterActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity $transition-timing-function $transition-duration, transform $transition-timing-function $transition-duration;
+}
+
+.transitionExit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.transitionExitActive {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity $transition-timing-function $transition-duration, transform $transition-timing-function $transition-duration;
+}
