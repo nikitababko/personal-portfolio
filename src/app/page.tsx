@@ -1,13 +1,15 @@
 import React from 'react';
 
-import {
-  About,
-  Home,
-  NavBar,
-  Projects,
-} from './components';
+import { About, Home, NavBar } from './components';
+import { getData } from './helpers';
+import { ENDPOINTS } from './constants';
 
-export default function App() {
+export default async function App() {
+  // const projectsResponse = await getData(
+  //   ENDPOINTS.PROJECTS,
+  // );
+  const aboutResponse = await getData(ENDPOINTS.ABOUT);
+
   return (
     <div className="app">
       <NavBar />
@@ -15,9 +17,11 @@ export default function App() {
       <main>
         <Home />
 
-        <About />
+        {aboutResponse && <About data={aboutResponse} />}
 
-        <Projects />
+        {/* {projectsResponse && ( */}
+        {/*  <Projects data={projectsResponse} /> */}
+        {/* )} */}
       </main>
     </div>
   );
