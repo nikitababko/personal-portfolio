@@ -92,7 +92,8 @@
           {
             "ignore": ["Props"]
           }
-        ]
+        ],
+        "unicorn/no-null": "off"
       }
     },
     {
