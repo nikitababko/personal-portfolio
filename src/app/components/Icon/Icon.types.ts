@@ -4,7 +4,11 @@ import type React from 'react';
 export namespace IconNSTypes {
   export type Color = CSS.Property.Color;
 
-  export type Name = 'download' | 'mouse' | 'arrowDown';
+  export type Name =
+    | 'download'
+    | 'mouse'
+    | 'arrowDown'
+    | 'chevronLeft';
 
   export type Props = {
     color?: Color;

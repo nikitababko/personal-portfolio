@@ -1,7 +1,13 @@
 @import '../../../styles/variables';
 
-
 .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  align-items: center;
+}
+
+.content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -31,4 +37,28 @@
   opacity: 0;
   transform: scale(0);
   transition: opacity $transition-timing-function $transition-duration, transform $transition-timing-function $transition-duration;
+}
+
+.showMore {
+  padding: 10px 34px;
+  font-size: 18px;
+  color: $color-white;
+  text-decoration: none;
+  background-color: $color-purple;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: color $transition-timing-function $transition-duration, background-color $transition-timing-function $transition-duration, border $transition-timing-function $transition-duration;
+
+  &:hover {
+    color: $color-purple;
+    background-color: $color-white;
+    border-color: $color-purple;
+  }
+}
+
+
+@media screen and (min-width: $media-992) {
+  .showMore {
+    font-size: 24px;
+  }
 }

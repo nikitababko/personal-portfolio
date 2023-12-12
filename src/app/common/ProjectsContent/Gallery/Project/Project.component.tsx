@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import styles from './Project.styles.module.scss';
 import type { GalleryProjectNSTypes } from './Project.types';
+import { ENDPOINTS } from '../../../../constants';
 
 export const Project: React.FC<
   GalleryProjectNSTypes.Props
@@ -19,7 +20,7 @@ export const Project: React.FC<
       <Link
         className={styles.more}
         href={{
-          pathname: `/projects/${project.id}`,
+          pathname: `/${ENDPOINTS.PROJECTS}/${project.id}`,
         }}
       >
         More

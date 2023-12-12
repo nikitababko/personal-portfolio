@@ -33,6 +33,7 @@
   border: 1px solid $color-black;
   background-color: $color-white;
   transition: color $transition-timing-function $transition-duration, background-color $transition-timing-function $transition-duration;
+  border-radius: 4px;
 
   &:hover {
     color: $color-white;
