@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './ScrollDownButton.styles.module.scss';
-import { Icon } from '../../Icon';
+import { Icon } from '../../../common';
 
 export const ScrollDownButton: React.FC = () => {
   return (

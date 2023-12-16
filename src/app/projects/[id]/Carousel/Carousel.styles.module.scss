@@ -1,0 +1,26 @@
+@import 'src/app/styles/variables.scss';
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.slide {
+  //width: 300px;
+  height: 250px;
+}
+
+@media screen and (min-width: $media-640) {
+  .container {
+    max-width: 600px;
+  }
+
+  .slide {
+    height: 420px;
+  }
+}
+
+
+
+

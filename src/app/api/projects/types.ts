@@ -18,13 +18,15 @@ export namespace ServerProjectsNSTypes {
     tag: FilterTag;
   };
 
+  export type Images = string[];
+
   export type Project = {
     id: string;
     title: string;
-    src: string;
-    link: string;
+    images: Images;
+    linkToGitHub?: string;
+    linkToDemo?: string;
     details: string;
-    alt: string;
     tags: FilterTag[];
   };
 

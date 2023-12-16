@@ -12,7 +12,11 @@ export const Project: React.FC<
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <Image src={project.src} alt={project.alt} fill />
+        <Image
+          src={project.images[0]}
+          alt="TODO: add alt"
+          fill
+        />
       </div>
 
       <p className={styles.title}>{project.title}</p>

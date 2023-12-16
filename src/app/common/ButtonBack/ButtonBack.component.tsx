@@ -4,7 +4,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 
 import styles from './ButtonBack.module.scss';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 
 export const ButtonBack: React.FC = () => {
   const router = useRouter();

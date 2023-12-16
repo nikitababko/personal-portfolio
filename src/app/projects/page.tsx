@@ -3,8 +3,7 @@ import React from 'react';
 import { getData } from '../helpers';
 import { ENDPOINTS } from '../constants';
 import styles from './styles.module.scss';
-import { ProjectsContent } from '../common/ProjectsContent/ProjectsContent.component';
-import { ButtonBack } from './ButtonBack';
+import { ButtonBack, ProjectsContent } from '../common';
 
 export default async function Projects() {
   const projectsResponse = await getData(

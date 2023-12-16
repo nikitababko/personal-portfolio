@@ -2,9 +2,11 @@
 
 import React from 'react';
 
-import { SectionTitle } from '../SectionTitle/SectionTitle.component';
+import {
+  ProjectsContent,
+  SectionTitle,
+} from '../../common';
 import type { ProjectsNSTypes } from './Projects.types';
-import { ProjectsContent } from '../../common/ProjectsContent/ProjectsContent.component';
 
 export const Projects: React.FC<ProjectsNSTypes.Props> = ({
   data,

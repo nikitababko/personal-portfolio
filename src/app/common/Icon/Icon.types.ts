@@ -8,7 +8,8 @@ export namespace IconNSTypes {
     | 'download'
     | 'mouse'
     | 'arrowDown'
-    | 'chevronLeft';
+    | 'chevronLeft'
+    | 'open';
 
   export type Props = {
     color?: Color;

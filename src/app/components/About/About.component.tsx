@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SectionTitle } from '../SectionTitle/SectionTitle.component';
+import { SectionTitle } from '../../common';
 import styles from './About.styles.module.scss';
 import { Description } from './Description';
 import type { AboutNSTypes } from './About.types';

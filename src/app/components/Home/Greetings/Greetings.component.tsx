@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './Greetings.styles.module.scss';
-import { Icon } from '../../Icon';
+import { Icon } from '../../../common';
 
 export const Greetings: React.FC = () => {
   return (
