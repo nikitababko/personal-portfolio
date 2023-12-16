@@ -1,4 +1,5 @@
 @import 'src/app/styles/variables.scss';
+@import 'src/app/styles/functions.scss';
 
 .inner {
   row-gap: 20px;
@@ -31,12 +32,12 @@
   background-color: $color-purple;
   border: 1px solid $color-purple;
   border-radius: 4px;
-  transition: background-color $transition-timing-function $transition-duration;
+  transition: transition(background-color);
   text-decoration: none;
 
   svg {
     path {
-      transition: stroke $transition-timing-function $transition-duration;
+      transition: transition(stroke);
     }
   }
 
@@ -56,7 +57,7 @@
 }
 
 .linkText {
-  transition: color $transition-timing-function $transition-duration;
+  transition: transition(color);
   color: $color-white;
   font-size: 16px;
 }

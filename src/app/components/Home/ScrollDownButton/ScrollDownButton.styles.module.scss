@@ -1,4 +1,5 @@
 @import 'src/app/styles/variables.scss';
+@import 'src/app/styles/functions.scss';
 
 @media screen and (min-width: $media-320), (max-width: $media-320) {
   .container {
@@ -19,7 +20,7 @@
 
     svg {
       path {
-        transition: fill $transition-timing-function $transition-duration;
+        transition: transition(fill);
       }
     }
 

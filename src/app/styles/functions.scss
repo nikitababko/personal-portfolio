@@ -1,0 +1,5 @@
+@import 'src/app/styles/variables.scss';
+
+@function transition($key) {
+  @return $key $transition-timing-function $transition-duration;
+}

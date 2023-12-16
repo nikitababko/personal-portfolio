@@ -1,4 +1,5 @@
-@import '../../../../styles/variables';
+@import 'src/app/styles/functions.scss';
+@import 'src/app/styles/variables.scss';
 
 .container {
   width: 80px;
@@ -8,7 +9,7 @@
   color: $color-black;
   border: 1px solid $color-purple;
   font-size: 12px;
-  transition: color $transition-timing-function $transition-duration, background-color $transition-timing-function $transition-duration;
+  transition: color transition(color), transition(background-color);
 
   &:hover {
     background-color: $color-purple;

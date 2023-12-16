@@ -1,4 +1,5 @@
 @import 'src/app/styles/variables.scss';
+@import 'src/app/styles/functions.scss';
 
 @media screen and (min-width: $media-320), (max-width: $media-320) {
   .container {
@@ -33,11 +34,11 @@
   .downloadCVContainer {
     column-gap: 20px;
     cursor: pointer;
-    transition: color $transition-timing-function $transition-duration, background-color $transition-timing-function $transition-duration;
+    transition: transition(color), transition(background-color);
 
     svg {
       path {
-        transition: fill $transition-timing-function $transition-duration;
+        transition: transition(fill);
       }
     }
 

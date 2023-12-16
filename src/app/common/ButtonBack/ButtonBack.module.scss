@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@import 'src/app/styles/variables.scss';
+@import 'src/app/styles/functions.scss';
 
 .container {
   display: flex;
@@ -13,7 +14,7 @@
   background-color: transparent;
   border: 1px solid $color-purple;
   border-radius: 8px;
-  transition: color $transition-timing-function $transition-duration, background-color $transition-timing-function $transition-duration;
+  transition: transition(color), transition(background-color);
 
   &:hover {
     color: $color-white;
@@ -22,7 +23,7 @@
 
   svg {
     path {
-      transition: fill $transition-timing-function $transition-duration;
+      transition: transition(fill);
     }
   }
 
