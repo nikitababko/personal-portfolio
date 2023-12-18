@@ -1,21 +1,20 @@
 import type { ServerAboutNSTypes } from './types';
 import { ASSETS_PATH } from '../../constants';
 
-export const description: ServerAboutNSTypes.Description[] =
-  [
-    {
-      id: 1,
-      value: `I am a well-organized person and a quick
+export const description: ServerAboutNSTypes.Paragraph[] = [
+  {
+    id: 1,
+    value: `I am a well-organized person and a quick
               learner. I am a results-oriented and
               detail-oriented software developer with
               experience in front-end, full-stack web
               development and extensive experience designing
               and implementing scalable and efficient
               solutions.`,
-    },
-    {
-      id: 2,
-      value: `I have a broad technical outlook, I am
+  },
+  {
+    id: 2,
+    value: `I have a broad technical outlook, I am
               familiar with react, react native, angular,
               vue, electron, etc. Ready to think outside the
               box. Able to collaborate with cross-functional
@@ -29,8 +28,8 @@ export const description: ServerAboutNSTypes.Description[] =
               abreast of new technologies and constantly
               improve my skills to contribute to
               cutting-edge projects.`,
-    },
-  ];
+  },
+];
 
 export const cards: ServerAboutNSTypes.Card[] = [
   {

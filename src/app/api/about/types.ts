@@ -1,5 +1,5 @@
 export namespace ServerAboutNSTypes {
-  export type Description = {
+  export type Paragraph = {
     id: number;
     value: string;
   };
@@ -9,5 +9,10 @@ export namespace ServerAboutNSTypes {
     src: string;
     text: string;
     alt: string;
+  };
+
+  export type Response = {
+    description: Paragraph[];
+    cards: Card[];
   };
 }
