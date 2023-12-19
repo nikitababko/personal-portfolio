@@ -9,7 +9,9 @@ export namespace IconNSTypes {
     | 'mouse'
     | 'arrowDown'
     | 'chevronLeft'
-    | 'open';
+    | 'open'
+    | 'education'
+    | 'briefcase';
 
   export type Props = {
     color?: Color;
