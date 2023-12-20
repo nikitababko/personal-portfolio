@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './Project.styles.module.scss';
-import type { GalleryProjectNSTypes } from './Project.types';
-import { ENDPOINTS } from '../../../../constants';
+import type { ProjectNSTypes } from './Project.types';
+import { ENDPOINTS } from '../../constants';
 
-export const Project: React.FC<
-  GalleryProjectNSTypes.Props
-> = ({ project }) => {
+export const Project: React.FC<ProjectNSTypes.Props> = ({
+  project,
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>

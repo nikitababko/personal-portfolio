@@ -3,12 +3,13 @@ import React from 'react';
 import { getData } from '../helpers';
 import { ENDPOINTS } from '../constants';
 import styles from './styles.module.scss';
-import { ButtonBack, ProjectsContent } from '../common';
+import { ButtonBack } from '../common';
+import type { ServerProjectsNSTypes } from '../api/projects/types';
+import { ClientWrapper } from './ClientWrapper';
 
 export default async function Projects() {
-  const projectsResponse = await getData(
-    ENDPOINTS.PROJECTS,
-  );
+  const projectsResponse: ServerProjectsNSTypes.Response =
+    await getData(ENDPOINTS.PROJECTS);
 
   if (!projectsResponse) {
     return null;
@@ -19,7 +20,7 @@ export default async function Projects() {
       <div className={`sectionInner ${styles.inner}`}>
         <ButtonBack />
 
-        <ProjectsContent data={projectsResponse} isPage />
+        <ClientWrapper data={projectsResponse} />
       </div>
     </div>
   );

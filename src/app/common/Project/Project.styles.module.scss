@@ -1,5 +1,5 @@
-@import 'src/app/styles/functions.scss';
-@import 'src/app/styles/variables.scss';
+@import '../../styles/functions';
+@import '../../styles/variables';
 
 .container {
   display: flex;
@@ -12,6 +12,14 @@
   min-height: 188px;
   box-shadow: 0 0 15px -1px lighten($color-black, 70);
   border-radius: 8px;
+
+  transition: transition(transform);
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 .imageWrapper {

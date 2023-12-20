@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import type { ProjectsFilterNSTypes } from './Filter.types';
+import type { LabelNSTypes } from './Label.types';
 
-export const useController: ProjectsFilterNSTypes.UseController =
+export const useController: LabelNSTypes.UseController =
   () => {
     const [offset, setOffset] =
-      useState<ProjectsFilterNSTypes.Offset>({
+      useState<LabelNSTypes.Offset>({
         offsetLeft: 0,
         offsetTop: 0,
       });

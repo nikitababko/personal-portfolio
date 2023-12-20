@@ -2,11 +2,9 @@
 
 import React from 'react';
 
-import {
-  ProjectsContent,
-  SectionTitle,
-} from '../../common';
+import { Project, SectionTitle, Tabs } from '../../common';
 import type { ProjectsNSTypes } from './Projects.types';
+import type { ServerProjectsNSTypes } from '../../api/projects/types';
 
 export const Projects: React.FC<ProjectsNSTypes.Props> = ({
   data,
@@ -16,7 +14,21 @@ export const Projects: React.FC<ProjectsNSTypes.Props> = ({
       <div className="sectionInner">
         <SectionTitle title="Projects" />
 
-        <ProjectsContent data={data} />
+        <Tabs<
+          ServerProjectsNSTypes.Filter,
+          ServerProjectsNSTypes.Project
+        >
+          data={{
+            labels: data.filters,
+            content: data.projects,
+          }}
+          showMore
+          renderContent={(content) => {
+            return (
+              <Project key={content.id} project={content} />
+            );
+          }}
+        />
       </div>
     </section>
   );

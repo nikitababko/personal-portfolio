@@ -1,45 +1,49 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import type { GalleryNSTypes } from './Gallery.types';
 import { useMediaQuery } from '../../../hooks';
+import type { TabsNSTypes } from '../Tabs.types';
 
-export const useController: GalleryNSTypes.UseController = (
-  selectedFilter,
-  data,
-  isPage,
+export const useController = <
+  LabelItem extends TabsNSTypes.ExtendLabel,
+  ContentItem extends TabsNSTypes.ExtendContentItem,
+>(
+  selectedLabel: LabelItem,
+  data: ContentItem[],
+  showMore?: boolean,
 ) => {
-  const [projects, setProjects] =
-    useState<GalleryNSTypes.Projects>(null);
+  const [items, setItems] = useState<ContentItem[] | null>(
+    null,
+  );
 
   const getSelectedProjects = useCallback(() => {
     return data.filter((element) => {
-      return element.tags.includes(selectedFilter.tag);
+      return element.tags?.includes(selectedLabel.tag);
     });
-  }, [data, selectedFilter.tag]);
+  }, [data, selectedLabel.tag]);
 
   const mediaMin768 = useMediaQuery('(min-width: 768px)');
   const mediaMin992 = useMediaQuery('(min-width: 992px)');
 
   useEffect(() => {
-    if (isPage) {
-      setProjects(getSelectedProjects());
+    if (!showMore) {
+      setItems(getSelectedProjects());
     } else if (mediaMin992) {
       // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-      setProjects(getSelectedProjects().slice(0, 12));
+      setItems(getSelectedProjects().slice(0, 12));
     } else if (mediaMin768) {
       // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-      setProjects(getSelectedProjects().slice(0, 8));
+      setItems(getSelectedProjects().slice(0, 8));
     } else {
       // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-      setProjects(getSelectedProjects().slice(0, 6));
+      setItems(getSelectedProjects().slice(0, 6));
     }
   }, [
     getSelectedProjects,
     mediaMin768,
     mediaMin992,
-    selectedFilter,
-    isPage,
+    selectedLabel,
+    showMore,
   ]);
 
-  return { projects };
+  return { items };
 };

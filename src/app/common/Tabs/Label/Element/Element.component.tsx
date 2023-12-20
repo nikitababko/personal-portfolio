@@ -4,38 +4,42 @@ import React, { useEffect } from 'react';
 import styles from './Element.styles.module.scss';
 import type { ElementNSTypes } from './Element.types';
 import { useController } from './Element.controller';
+import type { TabsNSTypes } from '../../Tabs.types';
 
-export const Element: React.FC<ElementNSTypes.Props> = ({
-  filterItem,
+export const Element = <
+  Label extends TabsNSTypes.ExtendLabel,
+>({
+  labelItem,
   setOffset,
-  setSelectedFilter,
-}) => {
-  const { handleClick, reference } = useController(
-    filterItem,
+  setSelectedLabel,
+  labelWidthClassName,
+}: ElementNSTypes.Props<Label>) => {
+  const { handleClick, reference } = useController<Label>(
+    labelItem,
     setOffset,
-    setSelectedFilter,
+    setSelectedLabel,
   );
 
   useEffect(() => {
     const offsetLeft = reference?.current?.offsetLeft;
     const offsetTop = reference?.current?.offsetTop;
     if (
-      filterItem.id === 1 &&
+      labelItem.id === 1 &&
       offsetLeft !== undefined &&
       offsetTop !== undefined
     ) {
       setOffset?.({ offsetLeft, offsetTop });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterItem.id, reference]);
+  }, [labelItem.id, reference]);
 
   return (
     <button
       onClick={handleClick}
       ref={reference as LegacyRef<HTMLButtonElement>}
-      className={styles.container}
+      className={`${styles.container} ${labelWidthClassName}`}
     >
-      {filterItem.value}
+      {labelItem.value}
     </button>
   );
 };

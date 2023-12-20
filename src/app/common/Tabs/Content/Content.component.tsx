@@ -1,30 +1,34 @@
-'use client';
-
 import React from 'react';
+import Link from 'next/link';
 import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
 
-import Link from 'next/link';
-import type { GalleryNSTypes } from './Gallery.types';
-import { useController } from './Gallery.controller';
-import styles from './Gallery.styles.module.scss';
-import { Project } from './Project';
+import type { ContentNSTypes } from './Content.types';
+import { useController } from './Content.controller';
+import styles from './Content.styles.module.scss';
 import { ENDPOINTS } from '../../../constants';
+import type { TabsNSTypes } from '../Tabs.types';
 
-export const Gallery: React.FC<GalleryNSTypes.Props> = ({
-  selectedFilter,
+export const Content = <
+  LabelItem extends TabsNSTypes.ExtendLabel,
+  ContentItem extends TabsNSTypes.ExtendContentItem,
+>({
+  selectedLabel,
   data,
-  isPage,
-}) => {
-  const { projects } = useController(
-    selectedFilter,
+  showMore,
+  renderContent,
+}: ContentNSTypes.Props<LabelItem, ContentItem>) => {
+  const { items } = useController(
+    selectedLabel,
     data,
-    isPage,
-  );
+    showMore,
+  ) as ReturnType<
+    ContentNSTypes.UseController<ContentItem>
+  >;
 
-  if (!projects) {
+  if (!items) {
     return null;
   }
 
@@ -34,7 +38,7 @@ export const Gallery: React.FC<GalleryNSTypes.Props> = ({
         component="div"
         className={styles.content}
       >
-        {projects.map((project) => (
+        {items.map((project) => (
           <CSSTransition
             key={project.id}
             classNames={{
@@ -50,12 +54,12 @@ export const Gallery: React.FC<GalleryNSTypes.Props> = ({
             unmountOnExit
             mountOnEnter
           >
-            <Project key={project.id} project={project} />
+            {renderContent(project)}
           </CSSTransition>
         ))}
       </TransitionGroup>
 
-      {!isPage && (
+      {showMore && (
         <Link
           className={styles.showMore}
           href={ENDPOINTS.PROJECTS}

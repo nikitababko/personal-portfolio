@@ -30,7 +30,7 @@ export namespace ServerProjectsNSTypes {
     tags: FilterTag[];
   };
 
-  export type ProjectsResponse = {
+  export type Response = {
     projects: Project[];
     filters: Filter[];
   };
