@@ -6,7 +6,7 @@
 }
 
 .title {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
 }
 
@@ -66,5 +66,15 @@
   .footer {
     justify-content: flex-start;
     column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: $media-640) {
+  .title {
+    font-size: 26px;
+  }
+
+  .details {
+    font-size: 18px;
   }
 }
