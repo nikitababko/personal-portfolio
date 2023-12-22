@@ -1,6 +1,7 @@
 @import 'src/app/styles/variables.scss';
+@import 'src/app/styles/functions.scss';
 
-.items {
+.container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,6 +17,13 @@
   width: 100%;
   max-width: 100px;
   text-align: center;
+  transition: transition(transform);
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 .itemText {

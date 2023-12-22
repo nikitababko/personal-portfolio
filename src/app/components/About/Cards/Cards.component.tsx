@@ -8,7 +8,7 @@ export const Cards: React.FC<CardsNSTypes.Props> = ({
   cards,
 }) => {
   return (
-    <div className={styles.items}>
+    <div className={styles.container}>
       {cards?.map((card) => (
         <div key={card.id} className={styles.item}>
           <Image
