@@ -7,8 +7,11 @@ export namespace TabsNSTypes {
       content: ContentItem[];
     };
     showMore?: boolean;
-    renderContent: (data: ContentItem) => React.ReactNode;
+    renderContent: (
+      data: ContentItem & { index: number },
+    ) => React.ReactNode;
     labelWidthClassName?: string;
+    contentContainerStylesClassName?: string;
   };
 
   export type ExtendLabel = {

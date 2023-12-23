@@ -7,8 +7,9 @@ export namespace ContentNSTypes {
     data: ContentItem[];
     showMore?: boolean;
     renderContent: (
-      content: ContentItem,
+      content: ContentItem & { index: number },
     ) => React.ReactNode;
+    contentContainerStylesClassName?: string;
   };
 
   export type UseController<ContentItem> = (

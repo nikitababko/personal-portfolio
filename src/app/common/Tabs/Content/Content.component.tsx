@@ -19,6 +19,7 @@ export const Content = <
   data,
   showMore,
   renderContent,
+  contentContainerStylesClassName,
 }: ContentNSTypes.Props<LabelItem, ContentItem>) => {
   const { items } = useController(
     selectedLabel,
@@ -33,12 +34,14 @@ export const Content = <
   }
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${contentContainerStylesClassName}`}
+    >
       <TransitionGroup
         component="div"
         className={styles.content}
       >
-        {items.map((project) => (
+        {items.map((project, index) => (
           <CSSTransition
             key={project.id}
             classNames={{
@@ -51,10 +54,10 @@ export const Content = <
               enter: 300,
               exit: 300,
             }}
-            unmountOnExit
-            mountOnEnter
+            // unmountOnExit
+            // mountOnEnter
           >
-            {renderContent(project)}
+            {renderContent({ ...project, index })}
           </CSSTransition>
         ))}
       </TransitionGroup>

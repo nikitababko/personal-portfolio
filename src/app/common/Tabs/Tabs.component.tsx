@@ -16,12 +16,13 @@ export const Tabs = <
   showMore,
   renderContent,
   labelWidthClassName,
+  contentContainerStylesClassName,
 }: TabsNSTypes.Props<LabelItem, ContentItem>) => {
   const { selectedLabel, setSelectedLabel } =
     useController<LabelItem>(data.labels);
 
   return (
-    <div className={styles.content}>
+    <div className={styles.container}>
       <Label<LabelItem>
         setSelectedLabel={setSelectedLabel}
         selectedLabel={selectedLabel}
@@ -34,6 +35,9 @@ export const Tabs = <
         data={data.content}
         showMore={showMore}
         renderContent={renderContent}
+        contentContainerStylesClassName={
+          contentContainerStylesClassName
+        }
       />
     </div>
   );

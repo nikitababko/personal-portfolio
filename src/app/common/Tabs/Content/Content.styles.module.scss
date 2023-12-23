@@ -6,6 +6,7 @@
   flex-direction: column;
   row-gap: 24px;
   align-items: center;
+  width: 100%;
 }
 
 .content {
@@ -14,8 +15,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  column-gap: 14px;
+  column-gap: 10px;
   row-gap: 24px;
+  width: 100%;
 }
 
 .transitionEnter {
@@ -57,6 +59,11 @@
   }
 }
 
+@media screen and (min-width: $media-375) {
+  .content {
+    column-gap: 14px;
+  }
+}
 
 @media screen and (min-width: $media-992) {
   .showMore {

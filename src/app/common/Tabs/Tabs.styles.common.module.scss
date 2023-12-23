@@ -1,0 +1,11 @@
+@import 'src/app/styles/variables.scss';
+
+.commonLabel {
+  font-size: 14px;
+}
+
+@media screen and (min-width: $media-992) {
+  .commonLabel {
+    font-size: 16px;
+  }
+}

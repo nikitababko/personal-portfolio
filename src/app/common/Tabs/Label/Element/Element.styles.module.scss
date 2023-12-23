@@ -1,5 +1,6 @@
 @import 'src/app/styles/functions.scss';
 @import 'src/app/styles/variables.scss';
+@import '../../Tabs.styles.common.module';
 
 .container {
   width: 80px;
@@ -8,8 +9,9 @@
   background-color: $color-white;
   color: $color-black;
   border: 1px solid $color-purple;
-  font-size: 12px;
   transition: color transition(color), transition(background-color);
+
+  @extend .commonLabel;
 
   &:hover {
     background-color: $color-purple;
@@ -21,6 +23,5 @@
   .container {
     width: 90px;
     height: 36px;
-    font-size: 16px;
   }
 }
