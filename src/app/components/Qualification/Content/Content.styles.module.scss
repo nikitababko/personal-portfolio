@@ -1,0 +1,51 @@
+@import 'src/app/styles/variables.scss';
+
+$position-value: 40px;
+$container-height: 110px;
+$difference-between-items: 24px;
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 20px;
+  width: 100%;
+  height: $container-height;
+}
+
+.line {
+  position: absolute;
+  left: 4px;
+  width: 2px;
+  height: $container-height + $difference-between-items;
+  background-color: $color-black;
+}
+
+.round {
+  width: 100%;
+  max-width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color-black;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.place {
+  font-size: 16px;
+}
+
+.other {
+  font-size: 14px;
+  line-height: 18px;
+}

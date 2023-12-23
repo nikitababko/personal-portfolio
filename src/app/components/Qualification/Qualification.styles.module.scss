@@ -1,0 +1,15 @@
+@import 'src/app/styles/variables.scss';
+
+.labelWidthClassName {
+  width: 130px;
+}
+
+.contentContainerStylesClassName {
+  max-width: 300px;
+}
+
+@media screen and (min-width: $media-992) {
+  .labelWidthClassName {
+    width: 150px;
+  }
+}
