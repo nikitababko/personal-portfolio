@@ -12,6 +12,7 @@ export namespace TabsNSTypes {
     ) => React.ReactNode;
     labelWidthClassName?: string;
     contentContainerStylesClassName?: string;
+    contentContentStylesClassName?: string;
   };
 
   export type ExtendLabel = {

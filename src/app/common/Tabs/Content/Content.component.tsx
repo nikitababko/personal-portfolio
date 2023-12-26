@@ -20,6 +20,7 @@ export const Content = <
   showMore,
   renderContent,
   contentContainerStylesClassName,
+  contentContentStylesClassName,
 }: ContentNSTypes.Props<LabelItem, ContentItem>) => {
   const { items } = useController(
     selectedLabel,
@@ -39,7 +40,7 @@ export const Content = <
     >
       <TransitionGroup
         component="div"
-        className={styles.content}
+        className={`${styles.content} ${contentContentStylesClassName}`}
       >
         {items.map((project, index) => (
           <CSSTransition

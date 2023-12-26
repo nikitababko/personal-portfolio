@@ -10,6 +10,7 @@ export namespace ContentNSTypes {
       content: ContentItem & { index: number },
     ) => React.ReactNode;
     contentContainerStylesClassName?: string;
+    contentContentStylesClassName?: string;
   };
 
   export type UseController<ContentItem> = (
