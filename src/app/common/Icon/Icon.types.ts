@@ -1,6 +1,8 @@
 import type * as CSS from 'csstype';
 import type React from 'react';
 
+import type { ServerSkillsNSTypes } from '../../api/skills/types';
+
 export namespace IconNSTypes {
   export type Color = CSS.Property.Color;
 
@@ -11,7 +13,8 @@ export namespace IconNSTypes {
     | 'chevronLeft'
     | 'open'
     | 'education'
-    | 'briefcase';
+    | 'briefcase'
+    | ServerSkillsNSTypes.IconName;
 
   export type Props = {
     color?: Color;

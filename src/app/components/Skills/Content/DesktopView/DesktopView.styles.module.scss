@@ -1,0 +1,38 @@
+@import 'src/app/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.columnTitle {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.columnContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
+}
+
+.verticalLine {
+  width: 3px;
+  background-color: $color-black;
+}

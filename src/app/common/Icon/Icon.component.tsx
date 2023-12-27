@@ -18,7 +18,7 @@ export const Icon: React.FC<IconNSTypes.Props> = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {icons[name](color)}
+      {icons[name]?.(color)}
     </svg>
   );
 };
