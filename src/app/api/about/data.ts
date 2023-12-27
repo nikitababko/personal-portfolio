@@ -35,19 +35,19 @@ export const cards: ServerAboutNSTypes.Card[] = [
   {
     id: 1,
     src: `${ASSETS_PATH}/about/responsive-design.png`,
-    text: `My layouts will work on any device, big or small`,
+    text: 'My layouts will work on any device, big or small',
     alt: 'Responsive design icon',
   },
   {
     id: 2,
     src: `${ASSETS_PATH}/about/fast.png`,
-    text: `Fast load times and lag free interaction, my highest priority`,
+    text: 'Fast load times and lag free interaction, my highest priority',
     alt: 'Performance icon',
   },
   {
     id: 3,
     src: `${ASSETS_PATH}/about/light-bulb.png`,
-    text: `Strong preference for easy to use, intuitive UX/UI`,
+    text: 'Strong preference for easy to use, intuitive UX/UI',
     alt: 'Light bulb icon',
   },
   {

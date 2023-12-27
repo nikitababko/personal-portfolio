@@ -30,13 +30,13 @@ export const Element = <
     ) {
       setOffset?.({ offsetLeft, offsetTop });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [labelItem.id, reference]);
+  }, [labelItem.id, reference, setOffset]);
 
   return (
     <button
       onClick={handleClick}
       ref={reference as LegacyRef<HTMLButtonElement>}
+      type="button"
       className={`${styles.container} ${labelWidthClassName}`}
     >
       {labelItem.value}

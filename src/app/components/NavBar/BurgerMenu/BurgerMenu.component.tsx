@@ -8,6 +8,7 @@ export const BurgerMenu: React.FC<
 > = ({ isOpenMobileNavigation, handleClick }) => {
   return (
     <button
+      type="button"
       onClick={handleClick}
       className={`${styles.container} ${
         isOpenMobileNavigation ? styles.isOpen : ''

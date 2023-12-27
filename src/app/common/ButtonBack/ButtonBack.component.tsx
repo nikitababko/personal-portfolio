@@ -13,6 +13,7 @@ export const ButtonBack: React.FC = () => {
     <button
       className={styles.container}
       onClick={() => router.back()}
+      type="button"
     >
       <Icon name="chevronLeft" color="#323bac" />
       Back

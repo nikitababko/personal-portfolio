@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import type { ElementNSTypes } from './Element.types';
 import type { LabelNSTypes } from '../Label.types';
@@ -12,7 +12,6 @@ export const useController = <Label>(
   >,
 ): ElementNSTypes.UseControllerReturn => {
   const reference = useRef<ElementNSTypes.Reference>();
-  const [isActive, setIsActive] = useState<boolean>(false);
 
   const handleClick = () => {
     const offsetLeft = reference?.current?.offsetLeft;
@@ -28,13 +27,8 @@ export const useController = <Label>(
       });
     }
 
-    setIsActive(true);
     setSelectedLabel(filterItem);
   };
-
-  useEffect(() => {
-    return () => setIsActive(false);
-  }, [isActive]);
 
   return { handleClick, reference };
 };

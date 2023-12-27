@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 /**
  * @param query {string}
  * @example query: (min-width: 768px)
  */
 export const useMediaQuery = (query: string): boolean => {
-  // eslint-disable-next-line unicorn/consistent-function-scoping
-  const getMatches = (q: string): boolean => {
+  const getMatches = useCallback((q: string): boolean => {
     // Prevents SSR issues
     if (typeof window !== 'undefined') {
       return window.matchMedia(q).matches;
     }
+
     return false;
-  };
+  }, []);
 
   const [matches, setMatches] = useState<boolean>(
     getMatches(query),
   );
 
-  const handleChange = () => {
+  const handleChange = useCallback(() => {
     setMatches(getMatches(query));
-  };
+  }, [getMatches, query]);
 
   useEffect(() => {
     const matchMedia = window.matchMedia(query);
@@ -45,8 +45,7 @@ export const useMediaQuery = (query: string): boolean => {
         );
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [handleChange, query]);
 
   return matches;
 };

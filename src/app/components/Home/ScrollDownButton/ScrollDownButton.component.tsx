@@ -5,7 +5,7 @@ import { Icon } from '../../../common';
 
 export const ScrollDownButton: React.FC = () => {
   return (
-    <button className={styles.container}>
+    <button className={styles.container} type="button">
       <Icon name="mouse" />
 
       <p>Click to scroll</p>

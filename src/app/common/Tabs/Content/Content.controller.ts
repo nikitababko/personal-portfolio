@@ -41,7 +41,6 @@ export const useController = <
     getSelectedProjects,
     mediaMin768,
     mediaMin992,
-    selectedLabel,
     showMore,
   ]);
 
