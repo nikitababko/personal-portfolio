@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  width: 100%;
+  min-width: 300px;
+}
+
+.columnContent {
+  width: 100%;
+}
+
+.columnTitle {
+  font-size: 24px;
+  font-weight: 500;
+}
