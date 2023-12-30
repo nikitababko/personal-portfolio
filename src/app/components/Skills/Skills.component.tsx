@@ -5,8 +5,7 @@ import React from 'react';
 import { SectionTitle } from '../../common';
 import type { SkillsNSTypes } from './Skills.types';
 import { useMediaQuery } from '../../hooks';
-import { DesktopView } from './Content/DesktopView';
-import { MobileView } from './Content/MobileView';
+import { DesktopView, MobileView } from './Content';
 
 export const Skills: React.FC<SkillsNSTypes.Props> = ({
   data: { titles, content },

@@ -1,13 +1,13 @@
 import React from 'react';
 
 import styles from './MobileView.styles.module.scss';
-import type { MobileViewNSTypes } from './MobileView.types';
+import type { SkillsMobileViewNSTypes } from './MobileView.types';
 import { Tabs } from '../../../../common';
 import type { ServerSkillsNSTypes } from '../../../../api/skills/types';
 import { Item } from '../Item';
 
 export const MobileView: React.FC<
-  MobileViewNSTypes.Props
+  SkillsMobileViewNSTypes.Props
 > = ({ titles, content }) => {
   return (
     <Tabs<
