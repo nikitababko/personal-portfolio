@@ -6,5 +6,5 @@ import styles from './SectionTitle.styles.module.scss';
 export const SectionTitle: React.FC<
   SectionTitleNSTypes.Props
 > = ({ title }) => {
-  return <h2 className={styles.title}>{title}</h2>;
+  return <h2 className={styles.container}>{title}</h2>;
 };
