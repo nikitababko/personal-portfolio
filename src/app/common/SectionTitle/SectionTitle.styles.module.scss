@@ -1,8 +1,6 @@
 @import 'src/app/styles/variables.scss';
 
-@media screen and (min-width: $media-320), (max-width: $media-320) {
-  .container {
-    font-size: 38px;
-    font-weight: 700;
-  }
+.container {
+  font-size: 38px;
+  font-weight: 700;
 }

@@ -1,62 +1,60 @@
 @import 'src/app/styles/variables.scss';
 @import 'src/app/styles/functions.scss';
 
-@media screen and (min-width: $media-320), (max-width: $media-320) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.badgeContainer {
+  display: flex;
+  height: 40px;
+  width: 260px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background-color: $color-white;
+  box-shadow: 0 0 20px lighten($color-black, 70);
+  border-radius: 12px;
+
+  h1, p {
+    font-size: 16px;
   }
+}
 
-  .badgeContainer {
-    display: flex;
-    height: 40px;
-    width: 260px;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    background-color: $color-white;
-    box-shadow: 0 0 20px lighten($color-black, 70);
-    border-radius: 12px;
+.name {
+  font-weight: 600;
+}
 
-    h1, p {
-      font-size: 16px;
+.downloadCVContainer {
+  column-gap: 20px;
+  cursor: pointer;
+  transition: transition(color), transition(background-color);
+
+  svg {
+    path {
+      transition: transition(fill);
     }
   }
 
-  .name {
-    font-weight: 600;
-  }
-
-  .downloadCVContainer {
-    column-gap: 20px;
-    cursor: pointer;
-    transition: transition(color), transition(background-color);
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
 
     svg {
       path {
-        transition: transition(fill);
-      }
-    }
-
-    &:hover {
-      background-color: $color-black;
-      color: $color-white;
-
-      svg {
-        path {
-          fill: $color-white;
-        }
+        fill: $color-white;
       }
     }
   }
+}
 
-  .emoji {
-    font-size: 20px;
-  }
+.emoji {
+  font-size: 20px;
 }
 
 @media screen and (min-width: $media-992) {
