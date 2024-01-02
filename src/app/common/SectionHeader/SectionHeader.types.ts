@@ -1,4 +1,4 @@
-export namespace SectionTitleNSTypes {
+export namespace SectionHeaderNSTypes {
   export type Props = {
     title: string;
   };

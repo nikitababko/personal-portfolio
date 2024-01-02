@@ -1,0 +1,32 @@
+@import 'src/app/styles/variables.scss';
+
+//.pseudoElements {
+//  content: '';
+//  position: absolute;
+//  top: 50%;
+//  transform: translateY(-50%);
+//  width: 40px;
+//  height: 4px;
+//  background-color: $color-black;
+//}
+
+.container {
+  position: relative;
+  
+  //&:before {
+  //  left: -50px;
+  //
+  //  @extend .pseudoElements;
+  //}
+  //
+  //&:after {
+  //  right: -50px;
+  //
+  //  @extend .pseudoElements;
+  //}
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+}
