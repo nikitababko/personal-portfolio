@@ -14,6 +14,7 @@ export namespace IconNSTypes {
     | 'open'
     | 'education'
     | 'briefcase'
+    | 'sadEmoji'
     | ServerSkillsNSTypes.IconName;
 
   export type Props = {

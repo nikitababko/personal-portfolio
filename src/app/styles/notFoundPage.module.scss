@@ -1,0 +1,39 @@
+@import 'src/app/styles/variables.scss';
+@import 'src/app/styles/functions.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 0 20px;
+  height: 100vh;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.text {
+  font-size: 20px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.buttonGoHome {
+  padding: 10px 30px;
+  border: 1px solid $color-purple;
+  border-radius: 6px;
+  text-decoration: none;
+  background-color: $color-purple;
+  color: $color-white;
+  transition: transition(background-color), transition(color);
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-purple;
+  }
+}
